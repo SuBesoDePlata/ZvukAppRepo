@@ -1,0 +1,10 @@
+﻿<Application x:Class="ZвукApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ZвукApp"
+             StartupUri="BaseWindow.xaml">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>
+    

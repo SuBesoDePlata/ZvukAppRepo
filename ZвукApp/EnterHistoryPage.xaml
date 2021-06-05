@@ -1,0 +1,32 @@
+﻿<Page x:Class="ZвукApp.EnterHistoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZвукApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EnterHistoryPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="199*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Row="0" Grid.Column="1" x:Name="EnterHistoryDataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Users.FirstName}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Users.LastName}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Users.Login}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Время входа" Binding="{Binding EnterDate}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Результат входа" Binding="{Binding Result}" Width="2*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Background="#c0c6c9" Grid.Row="1" Height="34" Width="120" Content="Назад" x:Name="BtnHistoryBack" HorizontalAlignment="Center" Click="BtnHistoryBack_Click"></Button>
+        
+    </Grid>
+</Page>

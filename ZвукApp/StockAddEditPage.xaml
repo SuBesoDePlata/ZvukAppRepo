@@ -1,0 +1,40 @@
+﻿<Page x:Class="ZвукApp.StockAddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZвукApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StockAddEditPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="39*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="36">Исполнитель</Label>
+        <Label Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="38">Название</Label>
+        <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="38">Тип</Label>
+        <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="38">Длительность</Label>
+        <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="36">Лейбл</Label>
+        <Label Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="38">Кол-во на складе</Label>
+        <TextBox FontSize="15" Text="{Binding Artist}" Grid.Row="0" Margin="15" Grid.Column="1"></TextBox>
+        <TextBox FontSize="15" Text="{Binding Name}" Grid.Row="1" Margin="15" Grid.Column="1"></TextBox>
+        <ComboBox FontSize="15" Grid.Row="2" SelectedItem="{Binding ProductTypes}" Grid.Column="1" x:Name="cBProducts" Margin="15"  DisplayMemberPath="TypeName"></ComboBox>
+        <TextBox FontSize="15" Text="{Binding Duration}" Grid.Row="3" Margin="15" Grid.Column="1"></TextBox>
+        <TextBox FontSize="15" Text="{Binding Label}" Grid.Row="4" Margin="15" Grid.Column="1"></TextBox>
+        <TextBox FontSize="15" Text="{Binding Quantity}" Grid.Row="5" Margin="15" Grid.Column="1"></TextBox>
+        <Button Grid.Column="1" Grid.Row="6" Height="34" Content="Сохранить" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#c0c6c9" Width="120" x:Name="BtnAddEditStockSave" Click="BtnAddEditStockSave_Click"></Button>
+        <Button Grid.Column="0" Grid.Row="6" Height="34" Width="120" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#c0c6c9" x:Name="BtnAddEditStockBack" Click="BtnAddEditStockBack_Click"></Button>
+    </Grid>
+</Page>

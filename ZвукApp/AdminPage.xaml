@@ -1,0 +1,61 @@
+﻿<Page x:Class="ZвукApp.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZвукApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="155"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid CanUserAddRows="False" Grid.Row="1" Grid.Column="1"  x:Name="adminDataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата рожд." Binding="{Binding DateOfBirth, StringFormat=dd/MM/yyyy}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Роль" Binding="{Binding UserTypes.TypeName}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Password}" Width="2*"></DataGridTextColumn>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Background="#c0c6c9" Content="Редактировать" Click=" btnAdminkEdit_Click" Name="btnAdminEdit"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
+            <Label FontSize="15">Поиск: </Label>
+        <TextBox Grid.Column="1" x:Name="tBAdminSearch" TextChanged="tBAdminSearch_TextChanged"  Height="34" Width="200" Margin="0,0,15,0"></TextBox>
+        </StackPanel>
+        <Image Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" Source="Resources/ZvukLogo.png"></Image>
+        <Button Background="#c0c6c9" Grid.Row="2" Height="34" Width="120" Content="Выход" x:Name="btnAdminExit" HorizontalAlignment="Center" Click="btnAdminExit_Click" Margin="15,13"></Button>
+        <Button Background="#c0c6c9" Grid.Row="1" Height="34" Width="120" Content="Интерф. кладовщика" x:Name="btnAdminToStock" VerticalAlignment="Bottom" Margin="0,0,0,15" HorizontalAlignment="Center" Click="btnAdminToStock_Click"></Button>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <Button Background="#c0c6c9" Height="34" Width="120" Content="История" x:Name="btnAdminHistory" Margin="10" Click="btnAdminHistory_Click"></Button>
+            <Button Background="#c0c6c9" Height="34" Width="120" Content="Добавить" x:Name="btnAdminAdd" Margin="10" Click="btnAdminAdd_Click"></Button>
+            <Button Background="#c0c6c9" Height="34" Width="120" Content="Удалить" x:Name="btnAdminDel" Margin="10" Click="btnAdminDel_Click"></Button>
+            <Button Background="#c0c6c9" Height="34" Width="120" Content="Печать" x:Name="btnAdminPrint" Margin="10" Click="btnAdminPrint_Click"></Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Margin="22,10" Grid.Row="1">
+            <Label FontSize="15">Вы зашли как:</Label>
+            <TextBlock FontSize="15" x:Name="TBAdminLastName" ></TextBlock>
+            <TextBlock FontSize="15" x:Name="TBAdminFirstName" ></TextBlock>
+            <Label FontSize="15">С ролью:</Label>
+            <TextBlock FontSize="15" x:Name="TBAdminUserType" ></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
