@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\39670\source\repos\ZвукApp\ZвукApp\obj\Debug\
+C:\Users\39670\source\repos\ZvukAppRepo\ZvukAppRepo\ZвукApp\obj\Debug\
 ZвукApp
 none
 false
 DEBUG;TRACE
-C:\Users\39670\source\repos\ZвукApp\ZвукApp\App.xaml
+C:\Users\39670\source\repos\ZvukAppRepo\ZvukAppRepo\ZвукApp\App.xaml
 9-2027872144
 2-1534432111
-252012193249
-211226207788
+261169833882
+211530643417
 AdminAddEditPage.xaml;AdminPage.xaml;AdminPrintPage.xaml;BaseWindow.xaml;EnterHistoryPage.xaml;LoginPage.xaml;StockAddEditPage.xaml;StockmanPage.xaml;StockPrintPage.xaml;
 
-False
+True
 
