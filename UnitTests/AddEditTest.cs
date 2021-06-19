@@ -6,10 +6,10 @@ using UnitTests;
 namespace AddEditTest
 {
     [TestClass()]
-    public class LoginTestClass
+    public class AddEditTestClass
     {
         [TestMethod()]
-        public void LoginTest()
+        public void AddEditTest()
         {
             var addedit1 = TestMethod("Иван", "Иванович", "Иванов", DateTime.Parse("1980-12-12"), "123321", 1, "321123", 0);
             var addedit2 = TestMethod("", "Иванович", "Иванов", DateTime.Parse("1980-12-12"), "ale", 1, "ale", 0);

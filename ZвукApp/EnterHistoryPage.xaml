@@ -26,7 +26,7 @@
                 <DataGridTextColumn Header="Результат входа" Binding="{Binding Result}" Width="2*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Background="#c0c6c9" Grid.Row="1" Height="34" Width="120" Content="Назад" x:Name="BtnHistoryBack" HorizontalAlignment="Center" Click="BtnHistoryBack_Click"></Button>
+        <Button Background="#c0c6c9" Grid.Row="1" Height="34" Width="120" Content="D" x:Name="BtnHistoryBack" HorizontalAlignment="Center" Click="BtnHistoryBack_Click"></Button>
         
     </Grid>
 </Page>
